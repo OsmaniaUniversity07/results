@@ -27,8 +27,8 @@ a:hover {
   border: 1px solid black;
   background-color: white;
   font-weight: bold;
-  width: 80%; /* Adjusts width for responsiveness */
-  margin: 0 auto; /* Centers the element */
+  width: 60%; /* 75% of the original 80% width */
+  margin: 0 auto 0 10%; /* Left margin to center with some space */
 }
 
 .lower {
@@ -38,24 +38,24 @@ a:hover {
   font-size: 15px;
   color: red;
   border: 1px solid black;
-  width: 80%; /* Adjusts width for responsiveness */
-  margin: 0 auto; /* Centers the element with no gap */
-  padding: 10px; /* Provides padding within the element */
+  width: 60%; /* 75% of the original 80% width */
+  margin: 0 auto 0 10%; /* Left margin to center with some space */
+  padding: 10px;
 }
 
 @media (min-width: 768px) {
   /* Larger screens */
   .upper {
-    width: auto;
-    margin-left: 200px;
-    padding-left: 300px;
-    padding-right: 250px;
+    width: 45%; /* 75% of the original auto width */
+    margin-left: 150px; /* Reduced left margin */
+    padding-left: 200px;
+    padding-right: 187.5px; /* 75% of the original padding */
   }
 
   .lower {
-    width: auto;
-    margin-left: 200px;
-    padding-left: 100px;
-    padding-right: 195px;
+    width: 45%; /* 75% of the original auto width */
+    margin-left: 150px; /* Reduced left margin */
+    padding-left: 75px;
+    padding-right: 146.25px; /* 75% of the original padding */
   }
 }
