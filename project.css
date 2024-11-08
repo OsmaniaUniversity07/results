@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-  font-size: 13px;
+  font-size: 5.2px; /* Reduced by 60% */
   text-align: center;
 }
 
@@ -20,42 +20,41 @@ a:hover {
   color: rgb(15, 15, 15);
 }
 
-.upper {
-  display: inline-block;
-  padding: 6px;
-  font-size: 15px;
+.upper, .lower {
+  display: block;
+  padding: 2.4px; /* Reduced by 60% */
+  font-size: 6px; /* Reduced by 60% */
   border: 1px solid black;
-  background-color: white;
   font-weight: bold;
-  width: 60%; /* 75% of the original 80% width */
-  margin: 0 auto 0 10%; /* Left margin to center with some space */
+  width: 30%; /* Set exact same width */
+  margin: 0 auto; /* Center horizontally */
+  box-sizing: border-box; /* Ensure padding doesn’t affect width */
+}
+
+.upper {
+  background-color: white;
 }
 
 .lower {
-  display: inline-block;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  font-size: 15px;
   color: red;
-  border: 1px solid black;
-  width: 60%; /* 75% of the original 80% width */
-  margin: 0 auto 0 10%; /* Left margin to center with some space */
-  padding: 10px;
+  margin-top: 0; /* No gap between upper and lower */
+  padding-top: 4px; /* Slight padding if needed */
+}
+
+/* Styling for the input (search bar) */
+input[type="text"] {
+  width: 100%; /* Match the width of the parent (upper) */
+  font-size: 6px; /* Reduced by 60% */
+  padding: 2.4px; /* Reduced by 60% */
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Ensure padding doesn’t affect width */
 }
 
 @media (min-width: 768px) {
   /* Larger screens */
-  .upper {
-    width: 45%; /* 75% of the original auto width */
-    margin-left: 150px; /* Reduced left margin */
-    padding-left: 200px;
-    padding-right: 187.5px; /* 75% of the original padding */
-  }
-
-  .lower {
-    width: 45%; /* 75% of the original auto width */
-    margin-left: 150px; /* Reduced left margin */
-    padding-left: 75px;
-    padding-right: 146.25px; /* 75% of the original padding */
+  .upper, .lower {
+    width: 22.5%; /* Half of 45% */
+    padding: 2.4px; /* Reduced by 60% */
   }
 }
