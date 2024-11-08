@@ -22,11 +22,11 @@ a:hover {
 
 .upper, .lower {
   display: block;
-  padding: 2.4px; /* Reduced by 60% */
-  font-size: 6px; /* Reduced by 60% */
+  padding: 1.2px; /* Reduced to 50% of previous */
+  font-size: 6px; /* Kept the same */
   border: 1px solid black;
   font-weight: bold;
-  width: 30%; /* Set exact same width */
+  width: 45%; /* Increased width by 50% from 30% to 45% */
   margin: 0 auto; /* Center horizontally */
   box-sizing: border-box; /* Ensure padding doesn’t affect width */
 }
@@ -39,14 +39,14 @@ a:hover {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: red;
   margin-top: 0; /* No gap between upper and lower */
-  padding-top: 4px; /* Slight padding if needed */
+  padding-top: 2px; /* Reduced for smaller height */
 }
 
 /* Styling for the input (search bar) */
 input[type="text"] {
   width: 100%; /* Match the width of the parent (upper) */
-  font-size: 6px; /* Reduced by 60% */
-  padding: 2.4px; /* Reduced by 60% */
+  font-size: 6px; /* Kept the same */
+  padding: 1.2px; /* Reduced padding */
   border: 1px solid #ccc;
   box-sizing: border-box; /* Ensure padding doesn’t affect width */
 }
@@ -54,7 +54,7 @@ input[type="text"] {
 @media (min-width: 768px) {
   /* Larger screens */
   .upper, .lower {
-    width: 22.5%; /* Half of 45% */
-    padding: 2.4px; /* Reduced by 60% */
+    width: 33.75%; /* Increased by 50% from 22.5% */
+    padding: 1.2px; /* Reduced padding */
   }
 }
