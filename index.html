@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osmania University Results - BE Aug/Sept</title>
+  <link rel="stylesheet" href="project.css">
+  <script>
+    function redirectToResults() {
+      // Get the hall ticket number input value
+      const hallTicket = document.getElementById("Ht").value;
+
+      // Check if the hall ticket number is exactly 12 digits
+      const hallTicketPattern = /^\d{12}$/;
+      if (hallTicketPattern.test(hallTicket)) {
+        // Redirect to ext.html if valid
+        window.location.href = "ext.html";
+      } else {
+        // Display an alert if the input is not valid
+        alert("Please enter a valid 12-digit Hall Ticket Number.");
+      }
+    }
+
+    // Function to handle Enter key press
+    function handleKeyPress(event) {
+      if (event.key === "Enter") {
+        redirectToResults();
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>BE AICTE (Regular & supply) CBCS (Backlog) Aug/Sept 2024 examination results</h1>
+  <div class="main">
+    <div class="upper">
+      Enter Hall Ticket No. : 
+      <input type="text" name="Hall Ticket" id="Ht" onkeypress="handleKeyPress(event)">
+      <a class="red" href="javascript:void(0)" onclick="redirectToResults()">Submit</a>
+    </div>
+    <div class="lower">Please Enter 12 Digit Hall Ticket Number Ex: 161022749301, 161022748302.</div>
+  </div>
+</body>
+
+</html>
